@@ -26,8 +26,6 @@
 
     $arrLength = count($games);
 
-    var_dump($games[0]['homeTeam']);
-
 ?>
 
 <!DOCTYPE html>
