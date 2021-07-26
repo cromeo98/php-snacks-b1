@@ -38,11 +38,13 @@
 </head>
 <body>
 
+    <ul>
     <?php for($i = 0; $i < $arrLength; $i++) { ?>
 
         <li><?php echo $games[$i]['homeTeam'] . ' - ' . $games[$i]['awayTeam']. ' | ' . $games[$i]['awayTeamPts'] . '-' . $games[$i]['awayTeamPts']?></li>
 
     <?php } ?>
+    </ul>
     
 </body>
 </html>
