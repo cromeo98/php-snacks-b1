@@ -3,8 +3,6 @@
 2 Stampiamo a schermo tutte le partite con questo schema. Olimpia Milano - Cantù | 55-60 -->
 <?php
 
-    $try = 'mimmimmmimimimi';
-
     $games = [
         [
             'game1HomeTeam' => 'Cagliari',
@@ -12,10 +10,22 @@
             'game1HomeTeamPts' => rand(40, 60),
             'game1AwayTeamPts' => rand(40, 60)
         ],
+        [
+            'game2HomeTeam' => 'Cantù',
+            'game2AwayTeam' => 'Cagliari',
+            'game2HomeTeamPts' => rand(40, 60),
+            'game2AwayTeamPts' => rand(40, 60)
+        ],
+        [
+            'game3HomeTeam' => 'Verona',
+            'game3AwayTeam' => 'Virtus',
+            'game3HomeTeamPts' => rand(40, 60),
+            'game3AwayTeamPts' => rand(40, 60)
+        ],
     ];
 
     var_dump($games);
-    var_dump($try);
+
 ?>
 
 <!DOCTYPE html>
