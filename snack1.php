@@ -5,26 +5,28 @@
 
     $games = [
         [
-            'game1HomeTeam' => 'Cagliari',
-            'game1AwayTeam' => 'Olimpia Milano',
-            'game1HomeTeamPts' => rand(40, 60),
-            'game1AwayTeamPts' => rand(40, 60)
+            'homeTeam' => 'Cagliari',
+            'awayTeam' => 'Olimpia Milano',
+            'homeTeamPts' => rand(40, 60),
+            'awayTeamPts' => rand(40, 60)
         ],
         [
-            'game2HomeTeam' => 'Cantù',
-            'game2AwayTeam' => 'Cagliari',
-            'game2HomeTeamPts' => rand(40, 60),
-            'game2AwayTeamPts' => rand(40, 60)
+            'homeTeam' => 'Cantù',
+            'awayTeam' => 'Cagliari',
+            'homeTeamPts' => rand(40, 60),
+            'awayTeamPts' => rand(40, 60)
         ],
         [
-            'game3HomeTeam' => 'Verona',
-            'game3AwayTeam' => 'Virtus',
-            'game3HomeTeamPts' => rand(40, 60),
-            'game3AwayTeamPts' => rand(40, 60)
+            'homeTeam' => 'Verona',
+            'awayTeam' => 'Virtus',
+            'homeTeamPts' => rand(40, 60),
+            'awayTeamPts' => rand(40, 60)
         ],
     ];
 
-    var_dump($games);
+    $arrLength = count($games);
+
+    var_dump($games[0]['homeTeam']);
 
 ?>
 
@@ -38,9 +40,11 @@
 </head>
 <body>
 
-    <p>
-        <?php echo $games ?>
-    </p>
+    <?php for($i = 0; $i < $arrLength; $i++) { ?>
+
+        <li><?php echo $games[$i]['homeTeam'] . ' - ' . $games[$i]['awayTeam']. ' | ' . $games[$i]['awayTeamPts'] . '-' . $games[$i]['awayTeamPts']?></li>
+
+    <?php } ?>
     
 </body>
 </html>
