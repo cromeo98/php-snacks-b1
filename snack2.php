@@ -10,9 +10,9 @@
     
     $age = (int)$_GET['age'];
 
-    var_dump($name);
-    var_dump($mail);
-    var_dump($age);
+    // var_dump($name);
+    // var_dump($mail);
+    // var_dump($age);
 
     $verification = false;
 
@@ -21,7 +21,7 @@
         $verification = true;
     };
 
-    var_dump($verification);
+    // var_dump($verification);
 
     $positiveResult = 'Accesso riuscito';
     $negativeResult = 'Accesso negato';
@@ -41,9 +41,13 @@
 <p>
 
     <?php if($verification){
+
         echo $positiveResult;
+
     } else {
+
         echo $negativeResult;
+        
     }
     ?>
 
