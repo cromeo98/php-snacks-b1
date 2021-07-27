@@ -8,7 +8,7 @@
 
     $mail = $_GET['mail'];
     
-    $age = (int)$_GET['age'];
+    $age = $_GET['age'];
 
     // var_dump($name);
     // var_dump($mail);
@@ -17,7 +17,7 @@
     $verification = false;
 
 
-    if(strlen($name) > 3 && strpos($mail, '@') && strpos($mail, '.') && is_int($age)){
+    if(strlen($name) > 3 && strpos($mail, '@') && strpos($mail, '.') && is_numeric($age)){
         $verification = true;
     };
 
@@ -47,7 +47,7 @@
     } else {
 
         echo $negativeResult;
-        
+
     }
     ?>
 
