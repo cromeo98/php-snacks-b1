@@ -14,25 +14,17 @@
     var_dump($mail);
     var_dump($age);
 
-    $verificationName = false;
-    $verificationMail = false;
-    $verificationAge = false;
+    $verification = false;
 
-    if(strlen($name) > 3){
-        $verificationName = true;
+
+    if(strlen($name) > 3 && strpos($mail, '@') && strpos($mail, '.') && is_int($age)){
+        $verification = true;
     };
 
-    if(strpos($mail, '@')){
-        $verificationMail = true;
-    };
+    var_dump($verification);
 
-    if(is_int($age)){
-        $verificationAge = true;
-    };
-
-    var_dump($verificationName);
-    var_dump($verificationMail);
-    var_dump($verificationAge);
+    $positiveResult = 'Accesso riuscito';
+    $negativeResult = 'Accesso negato';
 
 ?>
 
@@ -47,6 +39,13 @@
 <body>
 
 <p>
+
+    <?php if($verification){
+        echo $positiveResult;
+    } else {
+        echo $negativeResult;
+    }
+    ?>
 
 </p>
     
